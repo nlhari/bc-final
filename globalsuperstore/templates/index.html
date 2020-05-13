@@ -1,5 +1,10 @@
 {% extends "layout.html" %}
 
+{% block myscripts %}
+<script src="//d3js.org/d3.v3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/content/sequences.css" />
+{% endblock %}
+
 {% block content %}
 
 <div class="jumbotron">
@@ -9,7 +14,7 @@
 </div>
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-4 col-sm-6 col-md-12">
         <h2>Getting started</h2>
         <p>
             Flask gives you a powerful, patterns-based way to build dynamic websites that
@@ -18,7 +23,7 @@
         </p>
         <p><a class="btn btn-default" href="http://flask.pocoo.org/docs/">Learn more &raquo;</a></p>
     </div>
-    <div class="col-md-4">
+    <!-- <div class="col-md-4">
         <h2>Get more libraries</h2>
         <p>The Python Package Index is a repository of software for the Python programming language.</p>
         <p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p>
@@ -27,29 +32,38 @@
         <h2>Microsoft Azure</h2>
         <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
         <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
-    </div>
+    </div> -->
 </div>
 
-<div id="main">
-    <div id="sequence"></div>
-    <div id="chart">
-      <div id="explanation" style="visibility: hidden;">
-        <h2>Sales:</h2>
-        <span id="percentage"></span><br/> 
-      </div>
+<div class="row">
+    <div class="col-4 col-sm-6 col-md-12">
+    <div id="main">
+        <div id="sequence"></div>
+        <div id="chart">
+        <div id="explanation" style="visibility: hidden;">
+            <h2>Sales:</h2>
+            <span id="percentage"></span><br/> 
+        </div>
+        </div>
+    </div>
+    </div>
+</div> 
+<div class="row">
+    <div class="col-4 col-sm-6 col-md-12">
+        <h2>Microsoft Azure</h2>
+        <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
+        <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
     </div>
 </div>
+{% endblock %}
 
-<script src="//d3js.org/d3.v3.min.js"></script>
-<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter2/1.5.2/crossfilter.js"></script>
-<script type="text/javascript" src="https://unpkg.com/dc@4/dist/dc.js"></script>
-<script type="text/css" src="https://unpkg.com/dc@4/dist/style/dc.css"></script> -->
+{% block scripts %}
+
 <script src="https://unpkg.com/currency.js@~1.2.0/dist/currency.min.js"></script>
 <script type="text/javascript" src="/static/scripts/sequences.js"></script>
-<script type="text/css" src="/static/content/sequences.css"></script>
+
 <script type="text/javascript">
     // Hack to make this example display correctly in an iframe on bl.ocks.org
     d3.select(self.frameElement).style("height", "700px");
-</script>   
-
+</script> 
 {% endblock %}

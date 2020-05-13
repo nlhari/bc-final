@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+{% block myscripts %}
+<!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css"/> -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dc/2.0.0-beta.27/dc.min.css"/>
+{% endblock %}
+
+{% block content %}
+<!-- <h2>{{ title }}.</h2> -->
+<!-- <h3>{{ message }}</h3> -->
+
+<div class="container">
+    <div class="jumbotron">
+      <h2>
+        Global Super Store - Business Trends (2016 - 2019)
+        <!-- <span id="report-date" style="float: right;">2019</span> -->
+      </h2>
+      <p></p>
+    </div>
+    <div class="row">
+      <div class="col-4 col-sm-6 col-md-12">
+          <h2>Microsoft Azure</h2>
+          <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
+          <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
+      </div>
+    </div>
+    <div class="row">
+        <div id="yearly-bubble-chart" class="dc-chart">
+          <strong>Time Range Performance</strong> (radius: Sales ('000), color: profit/loss)
+          <a class="reset" href="javascript:yearlyBubbleChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+      
+          <div class="clearfix"></div>
+        </div>
+    </div>
+      
+      <div class="row">
+      
+        <div id="quarter-chart">
+          <strong>Quarters</strong>
+          <a class="reset" href="javascript:quarterChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+      
+          <div class="clearfix"></div>
+        </div>
+      
+        <div id="day-of-week-chart">
+          <strong>Daily Transaction Volume</strong>
+          <a class="reset" href="javascript:dayOfWeekChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+      
+          <div class="clearfix"></div>
+        </div>
+      
+        <div id="fluctuation-chart">
+          <strong>Profit Fluctuation(%)</strong>
+          <span class="reset" style="display: none;">range: <span class="filter"></span></span>
+          <a class="reset" href="javascript:fluctuationChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+      
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div id="monthly-move-chart">
+          <strong>Monthly Sales</strong>
+          <span class="reset" style="display: none;">range: <span class="filter"></span></span>
+          <a class="reset" href="javascript:moveChart.filterAll();volumeChart.filterAll();dc.redrawAll();"
+            style="display: none;">reset</a>
+      
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div id="monthly-volume-chart">
+        </div>
+        <!-- <p class="muted pull-right" style="margin-right: 15px;">select a time range to zoom in</p> -->
+      </div>
+      
+      <div class="row">
+        <div>
+          <div class="dc-data-count">
+            <span class="filter-count"></span> selected out of <span class="total-count"></span> records | <a
+              href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
+          </div>
+        </div>
+        <table class="table table-hover dc-data-table">
+        </table>
+      </div>
+      
+      <div class="clearfix"></div>
+      
+      
+      
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+      <!-- <script type="text/javascript" src="js/d3.js"></script> -->
+      <!-- <script type="text/javascript" src="js/crossfilter.js"></script> -->
+      <!-- <script type="text/javascript" src="js/dc.js"></script> -->
+      
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter2/1.5.2/crossfilter.js"></script>
+      <script type="text/javascript" src="https://unpkg.com/dc@4/dist/dc.js"></script>
+      <!-- <script type="text/css" src="https://unpkg.com/dc@4/dist/style/dc.css"></script> -->
+      <script src="https://unpkg.com/currency.js@~1.2.0/dist/currency.min.js"></script>
+    
+      <script type="text/javascript" src="/static/scripts/gss_financials.js"></script>
+{% endblock %}

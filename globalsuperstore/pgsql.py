@@ -9,7 +9,7 @@ from flask import Flask, jsonify
 from flask_sqlalchemy import SQLAlchemy
 
 import pandas as pd
-from FlaskWebProject import app
+from globalsuperstore import app
 import os
 
 
@@ -18,13 +18,11 @@ app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
 db = SQLAlchemy(app)
 
 
-def getApiInfo():
-    print("entering getapiinfo")
+def getStoreData():
+    print("entering getStoreData")
     engine = db.engine
     conn = engine.connect()
-    data = pd.read_sql("SELECT * FROM apikey where id=1", conn)
-    print(data)
-    key= data['api_key'][0]
-    baseurl = data['base_url'][0]
-    print(key)
-    return key , baseurl
+    data = pd.read_sql("SELECT orderdate, subcategory, category, sales, quantity, profit FROM gss", conn)
+    results = data.to_dict(orient='records')
+    # print(results)
+    return jsonify(results)
