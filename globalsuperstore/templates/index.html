@@ -3,29 +3,27 @@
 {% block content %}
 
 <div class="jumbotron">
-    <h1>Flask</h1>
-    <p class="lead">Flask is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <h1>Data for Decision Making.</h1>
+    <p class="lead">Explore our tools for analyzing sales data.</p>
     <p><a href="http://flask.pocoo.org/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>Review Trends</h2>
         <p>
-            Flask gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            Explore data visualizations showing current market trends.
         </p>
         <p><a class="btn btn-default" href="http://flask.pocoo.org/docs/">Learn more &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>The Python Package Index is a repository of software for the Python programming language.</p>
+        <h2>Explore Machine Learning</h2>
+        <p>Get cutting-edge information on what drives sales.</p>
         <p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Microsoft Azure</h2>
-        <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
+        <h2>Analyze Product Sentiment</h2>
+        <p>Search for a product to see its reception on Twitter.</p>
         <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
     </div>
 </div>
@@ -40,6 +38,38 @@
     </div>
 </div>
 
+<div class='tableauPlaceholder' id='viz1589040539609' style='position: relative'>
+    <noscript><a href='#'>
+        <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;ProfitSalesMap_15890403088630&#47;ProfitSalesMap&#47;1_rss.png' style='border: none' />
+    </a></noscript>
+    <object class='tableauViz'  style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+        <param name='embed_code_version' value='3' /> 
+        <param name='site_root' value='' />
+        <param name='name' value='ProfitSalesMap_15890403088630&#47;ProfitSalesMap' />
+        <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;ProfitSalesMap_15890403088630&#47;ProfitSalesMap&#47;1.png' />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+    </object></div>                
+    <script type='text/javascript'>                    
+        var divElement = document.getElementById('viz1589040539609');                    
+        var vizElement = divElement.getElementsByTagName('object')[0];                    
+        vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+        var scriptElement = document.createElement('script');                    
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+<html><body>
+    <h2>Review Sentiment Analysis</h2>
+    <form action="/tweepy_search">
+        What term would you like to search for? <input type='text' name='search_term'><br>
+        <input type='submit' value='Continue'>
+    </form>
+</body></html>
 <script src="//d3js.org/d3.v3.min.js"></script>
 <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter2/1.5.2/crossfilter.js"></script>
 <script type="text/javascript" src="https://unpkg.com/dc@4/dist/dc.js"></script>
