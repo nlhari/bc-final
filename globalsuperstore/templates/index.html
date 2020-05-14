@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block myscripts %}
+<script src="//d3js.org/d3.v3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/content/sequences.css" />
+{% endblock %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Data for Decision Making.</h1>
+    <p class="lead">Explore our tools for analyzing sales data.</p>
+    <p><a href="http://flask.pocoo.org/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Review Trends</h2>
+        <p>
+            Explore data visualizations showing current market trends.
+        </p>
+        <p><a class="btn btn-default" href="http://flask.pocoo.org/docs/">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Explore Machine Learning</h2>
+        <p>Get cutting-edge information on what drives sales.</p>
+        <p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Analyze Product Sentiment</h2>
+        <p>Search for a product to see its reception on Twitter.</p>
+        <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-4 col-sm-6 col-md-12">
+        <div id="main">
+            <div id="sequence"></div>
+            <div id="chart">
+                <div id="explanation" style="visibility: hidden;">
+                    <h2>Sales:</h2>
+                    <span id="percentage"></span><br />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-4 col-sm-6 col-md-12">
+        <h2>Microsoft Azure</h2>
+        <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application
+            using a free trial today.</p>
+        <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+<div class='tableauPlaceholder' id='viz1589331541547' style='position: relative'><noscript><a href='#'><img alt=' '
+                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;GN&#47;GN7H7KWZQ&#47;1_rss.png'
+                style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='path' value='shared&#47;GN7H7KWZQ' />
+        <param name='toolbar' value='yes' />
+        <param name='static_image'
+            value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;GN&#47;GN7H7KWZQ&#47;1.png' />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' /></object></div>
+<script
+    type='text/javascript'>                    
+    var divElement = document.getElementById('viz1589331541547'); 
+    var vizElement = divElement.getElementsByTagName('object')[0]; 
+    vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; 
+    var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+</script>
+
+<div>
+    <h2>Review Sentiment Analysis</h2>
+    <form action="/tweepy_search">
+        What term would you like to search for? <input type='text' name='search_term'><br>
+        <input type='submit' value='Continue'>
+    </form>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+
+
+<script src="//d3js.org/d3.v3.min.js"></script>
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter2/1.5.2/crossfilter.js"></script>
+<script type="text/javascript" src="https://unpkg.com/dc@4/dist/dc.js"></script>
+<script type="text/css" src="https://unpkg.com/dc@4/dist/style/dc.css"></script> -->
+<script src="https://unpkg.com/currency.js@~1.2.0/dist/currency.min.js"></script>
+<script type="text/javascript" src="/static/scripts/sequences.js"></script>
+
+<script type="text/javascript">
+    // Hack to make this example display correctly in an iframe on bl.ocks.org
+    d3.select(self.frameElement).style("height", "700px");
+</script>
+{% endblock %}
