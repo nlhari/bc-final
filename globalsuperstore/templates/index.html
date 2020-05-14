@@ -7,34 +7,37 @@
 
 {% block content %}
 
-<div class="jumbotron">
-    <h1>Data for Decision Making.</h1>
-    <p class="lead">Explore our tools for analyzing sales data.</p>
+ <div class="jumbotron">
+    <h1 class="text1">Data for Decision Making.</h1>
+    <p class="lead" id="test" class="text1">Explore our tools for analyzing sales data.</p>
     <p><a href="http://flask.pocoo.org/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-</div>
+</div> 
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Review Trends</h2>
-        <p>
+<div class="row" id="tbl">
+    <div class="col-md-4" id="fpcol">
+        <a href="#tweepy"><img id="fpimage" src="https://i.ya-webdesign.com/images/graph-icon-png-8.png"/>
+        <h2 id="test">Review Trends</h2>
+        <p id="test1">
             Explore data visualizations showing current market trends.
-        </p>
-        <p><a class="btn btn-default" href="http://flask.pocoo.org/docs/">Learn more &raquo;</a></p>
+        </p></a>
+        <!--<p><a class="btn btn-default" href="http://flask.pocoo.org/docs/">Learn more &raquo;</a></p>-->
     </div>
-    <div class="col-md-4">
-        <h2>Explore Machine Learning</h2>
-        <p>Get cutting-edge information on what drives sales.</p>
-        <p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p>
+    <div class="col-md-4" id="fpcol1">
+        <img id="fpimage" src="https://cdn0.iconfinder.com/data/icons/data-science-2-3/66/92-512.png"/>
+        <h2 id="test">Explore Machine Learning</h2>
+        <p id="test1">Get cutting-edge information on what drives sales.</p>
+        <!--<p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p>-->
     </div>
-    <div class="col-md-4">
-        <h2>Analyze Product Sentiment</h2>
-        <p>Search for a product to see its reception on Twitter.</p>
-        <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
+    <div class="col-md-4" id="fpcol2">
+        <img id="fpimage" src="static/images/output-onlinepngtools.png"/>
+        <h2 id="test">Analyze Product Sentiment</h2>
+        <p id="test1">Search for a product to see its reception on Twitter.</p>
+        <!--<p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>-->
     </div>
 </div>
 
 <div class="row">
-    <div class="col-4 col-sm-6 col-md-12">
+    <div class="col-12 col-sm-6 col-md-12">
         <div id="main">
             <div id="sequence"></div>
             <div id="chart">
@@ -54,6 +57,19 @@
         <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
     </div>
 </div>
+
+<div class="row" id="tweepy">
+    <div class="col-4 col-sm-6 col-md-12">
+        <h2>Review Sentiment Analysis</h2>
+        <form action="/tweepy_search">
+            What term would you like to search for? <input type='text' name='search_term'><br><br>
+        <button type = "submit"><img src="https://img.icons8.com/ios/50/000000/google-web-search.png"/></button><br>
+        <!--<input type='submit' value='Continue'>-->
+    </form>
+    </div>
+</div>
+
+</br>
 
 <div class='tableauPlaceholder' id='viz1589331541547' style='position: relative'><noscript><a href='#'><img alt=' '
                 src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;GN&#47;GN7H7KWZQ&#47;1_rss.png'
@@ -78,13 +94,7 @@
     vizElement.parentNode.insertBefore(scriptElement, vizElement);                
 </script>
 
-<div>
-    <h2>Review Sentiment Analysis</h2>
-    <form action="/tweepy_search">
-        What term would you like to search for? <input type='text' name='search_term'><br>
-        <input type='submit' value='Continue'>
-    </form>
-</div>
+
 
 {% endblock %}
 
