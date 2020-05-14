@@ -22,6 +22,16 @@ def home():
         year=datetime.now().year,
     )
 
+@app.route('/trends')
+def trends():
+    """Renders the home page."""
+    return render_template(
+        'trends.html',
+        title='Business Trends',
+        year=datetime.now().year
+    )
+
+
 @app.route('/contact')
 def contact():
     """Renders the contact page."""

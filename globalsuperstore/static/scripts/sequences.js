@@ -96,11 +96,11 @@ var arc = d3.svg.arc()
 
 // Use d3.text and d3.csv.parseRows so that we do not need to have a header
 // row, and can receive the csv as an array of arrays.
-d3.text("static/data/global-sales1.csv", function(text) {
+d3.text("static/data/global-sales.csv", function(text) {
   var csv = d3.csv.parseRows(text);
-  console.log(csv);
+
   var json = buildHierarchy(csv);
-  console.log(json);
+
   createVisualization(json);
 });
 
@@ -135,7 +135,7 @@ function createVisualization(json) {
       .on("mouseover", mouseover);
 
   // Add the mouseleave handler to the bounding circle.
-  d3.select("#container").on("mouseleave", mouseleave);
+  d3.select("#main").on("mouseleave", mouseleave);
 
   // Get total size of the tree = value of root node from partition.
   totalSize = path.node().__data__.value;
@@ -152,7 +152,7 @@ function mouseover(d) {
   }
   
   // use currency.js to convert float to currency with $ symbol and comma separated.
-  sales = currency(d.value, { formatWithSymbol: true }).format();
+  sales = currency(d.value, { formatWithSymbol: true, precision: 0 }).format();
 
   d3.select("#percentage")
     //   .text(percentageString);
