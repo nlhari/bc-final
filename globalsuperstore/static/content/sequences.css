@@ -1,7 +1,3 @@
-.container {
-  background-image: url("static/images/data-analytics.png");
-}
-
 #main {
     /* float: center; */
     width: 750px;
@@ -11,6 +7,8 @@
     width: 960px;
     height: 700px;
     margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
   }
   
 #sidebar {
@@ -21,6 +19,7 @@
 #sequence {
     width: 600px;
     height: 70px;
+    margin: 0 auto;
   }
   
 #sequence text {
@@ -30,7 +29,10 @@
   
 #chart {
     position: relative;
-    margin-left: 200px;
+    margin: 0 auto;
+    /* display: inline-block; */
+    width: 100%;
+    max-width: 750px;
   }
   
 #chart path {
@@ -39,14 +41,13 @@
   
 #explanation {
     position: absolute;
-    /* background-color: white; */
     top: 220px;
     left: 305px;
     width: 140px;
     text-align: center;
-    color: #666;
-    /* color: black; */
-    z-index: -1;
+    /* color: #666; */
+    color: black;
+    /* z-index: -1; */
   }
   
 #percentage {
@@ -55,6 +56,6 @@
 
 #fluctuation-chart {
   text-align: center;
-  margin-left: 30px;
+  /* margin-left: 30px; */
 }
 
