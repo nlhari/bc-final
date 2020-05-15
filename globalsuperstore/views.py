@@ -57,9 +57,9 @@ def about():
     """Renders the about page."""
     return render_template(
         'about.html',
-        title='About',
+        title='About HMI-DaTa Analytics',
         year=datetime.now().year,
-        message='Your application description page.'
+        # message='Your application description page.'
     )
 
 @app.route('/tweepy_search', methods=("POST", "GET"))

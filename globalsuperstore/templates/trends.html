@@ -16,13 +16,52 @@
       </h2>
       <p></p>
     </div>
+
     <div class="row">
       <div class="col-4 col-sm-6 col-md-12">
-          <h2>Microsoft Azure</h2>
-          <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
-          <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
+          <h3>Business KPIs</h3>
+          <p>Business Key Performance Indicators (KPIs) on Sales or Profit are usually measured against month over month,  
+              quarter over quarter or year over year (YoY) performance.  The chart below shows YoY performance of Sales 
+              and Profit over the four years for Global Super Store.  Other than the fact the business grew well each year,  
+              there's not much of <strong><em>insights</em></strong> these charts offer.</p>
       </div>
     </div>
+  
+  <img src="../static/images/gss_performance.png" class="center" id="gss_performance">
+  
+  <div class="row">
+    <div class="col-4 col-sm-6 col-md-12">
+        <h3>Multi-dimensional Visualization</h3>
+        <p>Our data scientists have put together a multidimensional, animated and interactive visualization of the entire sales dataset.
+            These interactive charts will help businesses look for patterns and gain insights that they wouldn't have known before.  
+            Our visualization allows one to graphically filter data on one chart and see the impact on all other charts.
+            The tooltip on the charts show relevant aggregation of the filtered dataset.</p>
+
+        <p> Since this visualization is based on time series of transactional data, by default the chart renders information for the entire
+            dataset.  One could select a time range, say, all of 2019 transactions (on the last chart) and see the visuals of other charts update.
+            One could move the time series filter across previous years to see the rest of the charts animate to the filtered dataset.
+            This is a very powerful visualization that will expose trends previously unknown.
+        </p>
+        <p> Here are some quick observations for 2019:
+          <ul>
+            <li>Copiers are the most profitable product.  <em>Was it the same every year?  Move the time range to 2016 to find out.</em></li>
+            <li>Tables are sold at a loss every year.  <em>Why is that?</em>  Maybe because in retail business success is dependent on foot traffic 
+                and discounted prices of Tables are the means for this business to attract customers into their stores?  <em>Remember razor and blade model anyone?</em></li>
+            <li>While Tuesdays are the busiest day for sale, it is surprising that Saturdays have lowest sales.  That was not the case in 2016.
+              Being a global retailer this is odd to explain.  <em>Did something change in their operations?</em></li>
+          </ul>
+        </p>
+        <p> Some observations of their overall business (entire dataset):
+          <ul>
+            <li>First quarter (Q1) sales is consistently lower while Q4 is their busiest.</li>
+            <li>Their quarterly YoY growth has been consistent across all years, and all quarters.</li>
+            <li>Click on Q4 in the Quarters chart. 2019 Dec sales is lower than that of Nov.  This is an odd pattern compared to previous years.</li>
+          </ul>
+        </p>
+        <p> Play with other filters.  Click a product category to find out its performance over the years.</p>
+    </div>
+  </div>
+  <br>
     <div class="row">
         <div id="yearly-bubble-chart" class="dc-chart">
           <strong id="text1">Time Range Performance</strong> (radius: Sales ('000), color: profit/loss)
@@ -47,48 +86,60 @@
       
           <div class="clearfix"></div>
         </div>
-      
-        <div id="fluctuation-chart">
-          <strong id="text1">Profit Fluctuation(%)</strong>
-          <span class="reset" style="display: none;">range: <span class="filter"></span></span>
-          <a class="reset" href="javascript:fluctuationChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
-      
-          <div class="clearfix"></div>
+    
+      <div id="fluctuation-chart">
+        <center><strong id="text1">Profit Fluctuation(%)</strong></center>
+        <span class="reset" style="display: none;">range: <span class="filter"></span></span>
+        <a class="reset" href="javascript:fluctuationChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+    
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div id="monthly-move-chart">
+        <strong id="text1">Monthly Sales</strong>
+        <span class="reset" style="display: none;">range: <span class="filter"></span></span>
+        <a class="reset" href="javascript:moveChart.filterAll();volumeChart.filterAll();dc.redrawAll();"
+          style="display: none;">reset</a>
+    
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div id="monthly-volume-chart">
+      </div>
+      <!-- <p class="muted pull-right" style="margin-right: 15px;">select a time range to zoom in</p> -->
+    </div>
+    <div class="row">
+      <center><p><em>Hover mouse over chart to select time range</em></p></center>
+    </div>
+    <div class="row">
+      <div>
+        <div class="dc-data-count">
+          <span class="filter-count"></span> selected out of <span class="total-count"></span> records | <a
+            href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
         </div>
       </div>
+      <table class="table table-hover dc-data-table">
+      </table>
+    </div>
+    
+    <div class="clearfix"></div>
       
-      <div class="row">
-        <div id="monthly-move-chart">
-          <strong id="text1">Monthly Sales</strong>
-          <span class="reset" style="display: none;">range: <span class="filter"></span></span>
-          <a class="reset" href="javascript:moveChart.filterAll();volumeChart.filterAll();dc.redrawAll();"
-            style="display: none;">reset</a>
-      
-          <div class="clearfix"></div>
-        </div>
+    <div class="row">
+      <div class="col-4 col-sm-6 col-md-12">
+          <h3>About the Chart</h3>
+          <p>We used <a href="https://dc-js.github.io/dc.js/" target="_blank">dc.js</a> library to generate these charts. <b>dc.js</b> is a javascript 
+            charting library with native <a href="http://crossfilter.github.io/crossfilter/" target="_blank">crossfilter</a> support, allowing highly efficient 
+            exploration on large multi-dimensional datasets (inspired by crossfilter's demo).  It leverages <a href="http://d3js.org/" target="_blank">d3</a> 
+            to render charts in CSS-friendly SVG format.  Charts rendered using dc.js are data driven and reactive and therefore provide 
+             instant feedback to user interaction.</p>
+          <p><b>dc.js</b> is an easy yet powerful javascript library for data visualization and analysis in the browser and on mobile devices.</p>
       </div>
-      
-      <div class="row">
-        <div id="monthly-volume-chart">
-        </div>
-        <!-- <p class="muted pull-right" style="margin-right: 15px;">select a time range to zoom in</p> -->
-      </div>
-      
-      <div class="row">
-        <div>
-          <div class="dc-data-count">
-            <span class="filter-count"></span> selected out of <span class="total-count"></span> records | <a
-              href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
-          </div>
-        </div>
-        <table class="table table-hover dc-data-table">
-        </table>
-      </div>
-      
-      <div class="clearfix"></div>
-      
-      
-      
+    </div>      
+
 </div>
 
 {% endblock %}
