@@ -43,31 +43,32 @@
   </div>
 
     <div class="row">
-      <div id="yearly-bubble-chart" class="dc-chart">
-        <strong>Time Range Performance</strong> (radius: Sales ('000), color: profit/loss)
-        <a class="reset" href="javascript:yearlyBubbleChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
-    
-        <div class="clearfix"></div>
-      </div>
+        <div id="yearly-bubble-chart" class="dc-chart">
+          <strong id="text1">Time Range Performance</strong> (radius: Sales ('000), color: profit/loss)
+          <a class="reset" href="javascript:yearlyBubbleChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+      
+          <div class="clearfix"></div>
+        </div>
     </div>
-    
-    <div class="row">
-      <div id="quarter-chart">
-        <strong>Quarters</strong>
-        <a class="reset" href="javascript:quarterChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
-    
-        <div class="clearfix"></div>
-      </div>
-    
-      <div id="day-of-week-chart">
-        <strong>Daily Transaction Volume</strong>
-        <a class="reset" href="javascript:dayOfWeekChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
-    
-        <div class="clearfix"></div>
-      </div>
+      
+      <div class="row">
+      
+        <div id="quarter-chart">
+          <strong id="text1">Quarters</strong>
+          <a class="reset" href="javascript:quarterChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+      
+          <div class="clearfix"></div>
+        </div>
+      
+        <div id="day-of-week-chart">
+          <strong id="text1">Daily Transaction Volume</strong>
+          <a class="reset" href="javascript:dayOfWeekChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+      
+          <div class="clearfix"></div>
+        </div>
     
       <div id="fluctuation-chart">
-        <center><strong>Profit Fluctuation(%)</strong></center>
+        <center><strong id="text1">Profit Fluctuation(%)</strong></center>
         <span class="reset" style="display: none;">range: <span class="filter"></span></span>
         <a class="reset" href="javascript:fluctuationChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
     
@@ -77,7 +78,7 @@
     
     <div class="row">
       <div id="monthly-move-chart">
-        <strong>Monthly Sales</strong>
+        <strong id="text1">Monthly Sales</strong>
         <span class="reset" style="display: none;">range: <span class="filter"></span></span>
         <a class="reset" href="javascript:moveChart.filterAll();volumeChart.filterAll();dc.redrawAll();"
           style="display: none;">reset</a>
@@ -116,26 +117,6 @@
       </div>
     </div>      
 
-    <div class="row">
-      <div class="col-md-4">
-          <h3>Business Trends</h3>
-          <p>
-              Explore data visualizations showing insights into current market trends.
-          </p>
-          <p><a class="btn btn-default" href="/trends">Learn more &raquo;</a></p>
-      </div>
-      <div class="col-md-4">
-          <h3>Explore Machine Learning</h3>
-          <p>Get cutting-edge information on what drives sales.</p>
-          <p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p>
-      </div>
-      <div class="col-md-4">
-          <h3>Analyze Product Sentiment</h3>
-          <p>Search for a product to see its reception on Twitter.</p>
-          <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
-      </div>
-  </div>
-  
 </div>
 
 {% endblock %}

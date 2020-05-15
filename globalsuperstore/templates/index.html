@@ -17,7 +17,41 @@
     <p><a href="/about" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
 </div>
 
+<div class="row" id="tbl">
+    <div class="col-md-4" id="fpcol">
+        <a href="/trends"><img id="fpimage" src="https://i.ya-webdesign.com/images/graph-icon-png-8.png"/>
+        <h2 id="test">Review Trends</h2>
+        <p id="test1">
+            Explore data visualizations showing insights into current market trends.
+        </p></a>
+        <!--<p><a class="btn btn-default" href="http://flask.pocoo.org/docs/">Learn more &raquo;</a></p>-->
+    </div>
+    <div class="col-md-4" id="fpcol1">
+        <img id="fpimage" src="https://cdn0.iconfinder.com/data/icons/data-science-2-3/66/92-512.png"/>
+        <h2 id="test">Explore Machine Learning</h2>
+        <p id="test1">Get cutting-edge information on what drives sales.</p>
+        <!--<p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p>-->
+    </div>
+    <div class="col-md-4" id="fpcol2">
+        <img id="fpimage" src="static/images/output-onlinepngtools.png"/>
+        <h2 id="test">Analyze Product Sentiment</h2>
+        <p id="test1">Search for a product to see its reception on Twitter.</p>
+        <!--<p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>-->
+    </div>
+</div>
 
+<div class="row" id="tweepy">
+    <div class="col-4 col-sm-6 col-md-12">
+        <h2>Review Sentiment Analysis</h2>
+        <form action="/tweepy_search">
+            What term would you like to search for? <input type='text' name='search_term'><br><br>
+        <button type = "submit"><img src="https://img.icons8.com/ios/50/000000/google-web-search.png"/></button><br>
+        <!--<input type='submit' value='Continue'>-->
+    </form>
+    </div>
+</div>
+
+</br>
 <div class="row">
     <div class="col-4 col-sm-6 col-md-12">
         <h2>Global Super Store - A Case Study</h2>
@@ -38,33 +72,36 @@
     </div>
 </div>
 
+
+
 <div class='tableauPlaceholder' id='viz1589375903416' style='position: relative'><noscript><a href='#'><img alt=' '
-                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;ProfitSalesMap&#47;ProfitSalesMap&#47;1_rss.png'
-                style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
-        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-        <param name='embed_code_version' value='3' />
-        <param name='site_root' value='' />
-        <param name='name' value='ProfitSalesMap&#47;ProfitSalesMap' />
-        <param name='tabs' value='no' />
-        <param name='toolbar' value='yes' />
-        <param name='static_image'
-            value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;ProfitSalesMap&#47;ProfitSalesMap&#47;1.png' />
-        <param name='animate_transition' value='yes' />
-        <param name='display_static_image' value='yes' />
-        <param name='display_spinner' value='yes' />
-        <param name='display_overlay' value='yes' />
-        <param name='display_count' value='yes' />
-        <param name='filter' value='publish=yes' /></object></div>
+    src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;ProfitSalesMap&#47;ProfitSalesMap&#47;1_rss.png'
+    style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+<param name='embed_code_version' value='3' />
+<param name='site_root' value='' />
+<param name='name' value='ProfitSalesMap&#47;ProfitSalesMap' />
+<param name='tabs' value='no' />
+<param name='toolbar' value='yes' />
+<param name='static_image'
+value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;ProfitSalesMap&#47;ProfitSalesMap&#47;1.png' />
+<param name='animate_transition' value='yes' />
+<param name='display_static_image' value='yes' />
+<param name='display_spinner' value='yes' />
+<param name='display_overlay' value='yes' />
+<param name='display_count' value='yes' />
+<param name='filter' value='publish=yes' /></object></div>
 <script
-    type='text/javascript'>                    
-    var divElement = document.getElementById('viz1589375903416'); 
-    var vizElement = divElement.getElementsByTagName('object')[0]; 
-    vizElement.style.width = '100%'; 
-    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; 
-    scriptElement = document.createElement('script'); 
-    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
-    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+type='text/javascript'>                    
+var divElement = document.getElementById('viz1589375903416'); 
+var vizElement = divElement.getElementsByTagName('object')[0]; 
+vizElement.style.width = '100%'; 
+vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; 
+scriptElement = document.createElement('script'); 
+scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
+vizElement.parentNode.insertBefore(scriptElement, vizElement);                
 </script>
+
 
 <div class="row">
     <div class="col-4 col-sm-6 col-md-12">
@@ -103,34 +140,6 @@
              except it uses a <code>radial layout</code>.</p>
         <p>This particular rendering of the sequence sunburst is courtesy <a href="https://bl.ocks.org/kerryrodden/7090426" target="_blank">Kerry Rodden</a>.</p>
     </div>
-</div>
-
-<div class="row">
-    <div class="col-md-4">
-        <h3>Business Trends</h3>
-        <p>
-            Explore data visualizations showing insights into current market trends.
-        </p>
-        <p><a class="btn btn-default" href="/trends">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h3>Explore Machine Learning</h3>
-        <p>Get cutting-edge information on what drives sales.</p>
-        <p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h3>Analyze Product Sentiment</h3>
-        <p>Search for a product to see its reception on Twitter.</p>
-        <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
-    </div>
-</div>
-
-<div>
-    <h3>Review Sentiment Analysis</h3>
-    <form action="/tweepy_search">
-        What term would you like to search for? <input type='text' name='search_term'><br>
-        <input type='submit' value='Continue'>
-    </form>
 </div>
 
 {% endblock %}
