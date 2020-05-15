@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+        }
+        
+        div {
+            width: 100%;
+        }
+        
+        .node circle {
+            fill: #fff;
+            stroke: steelblue;
+            stroke-width: 3px;
+        }
+        
+        .node text {
+            font: 16px 'Gill Sans MT';
+        }
+        
+        .link {
+            fill: none;
+            stroke: #ccc;
+            stroke-width: 2px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="whiterow">
+
+        <h2>Monthly Sales Forecast Using Machine Learning</h5>
+            <hr>
+            <div id="y_filters" class="col-md-4"></div>
+            <div id="chart" class="col-md-8"></div>
+            <br>
+            <p>References :</p>
+            <a href="https://www.d3-graph-gallery.com/graph/line_change_data.html"> D3 Line Graph : d3-gallary.com</a>
+            <a href="https://bl.ocks.org/d3noob/1a96af738c89b88723eb63456beb6510"> D3 Tree Diagram : bl.ocks.org/d3noob/</a>
+
+
+    </div>
+
+    <div style="background-color:rgba(0, 0, 0, 0.1);">
+        <h3>Forecast Accuracy</h3>
+        <br>
+        <a href="Salesforecast.html"> reference : Davis site</a>
+    </div>
+
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="static/js/forecastfunctions.js"></script>
+<!-- <script src="static/js/TreeApp.js"></script> -->
+
+
+</html>

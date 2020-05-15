@@ -1,79 +1,78 @@
-{% extends "layout.html" %}
-{% block myscripts %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-{% endblock %}
-
-{% block content %}
+{% extends "layout.html" %} {% block myscripts %}
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+{% endblock %} {% block content %}
 <h2>{{ title }}.</h2>
 <h3>{{ message }}</h3>
+<style>
+    body {
+        font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+    }
+    
+    div {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .node circle {
+        fill: #fff;
+        stroke: steelblue;
+        stroke-width: 3px;
+    }
+    
+    .node text {
+        font: 16px 'Gill Sans MT';
+    }
+    
+    .link {
+        fill: none;
+        stroke: #ccc;
+        stroke-width: 2px;
+    }
+    
+    .grid .tick {
+        stroke: lightgrey;
+        opacity: 0.7;
+    }
+    
+    .grid path {
+        stroke-width: 0;
+    }
+</style>
 
-<div class="container">
-    <div class="jumbotron">
-      <h1>
-        Amazon Financial Report
-        <span id="report-date" style="float: right;">2019</span>
-      </h1>
-      <p></p>
+</head>
+
+<body>
+
+    <div class="whiterow">
+
+        <h2>Monthly Sales Forecast Using Machine Learning</h5>
+            <hr>
+            <div id="y_filters" class="col-md-4"></div>
+            <div id="chart" class="col-md-8"></div>
+            <br>
+            <p>References :</p>
+            <a href="https://www.d3-graph-gallery.com/graph/line_change_data.html"> D3 Line Graph : d3-gallary.com</a><br>
+            <a href="https://bl.ocks.org/d3noob/1a96af738c89b88723eb63456beb6510"> D3 Tree Diagram : bl.ocks.org/d3noob/</a>
     </div>
 
-    <div class="row">
-      <div class="col-md-4">
-        <div class="panel panel-primary">
-          <div class="panel-body">
-            Company Profile
-          </div>
-        </div>
-        <div class="company">
-          Trading name Amazon Formerly called Cadabra, Inc. (1994–1995) Type Public Traded as NASDAQ: AMZN NASDAQ-100
-          component S&P 100 component S&P 500 component ISIN US0231351067 Industry Online shopping Founded
-          July 5, 1994; 23 years ago Founder Jeff Bezos Headquarters Seattle, Washington, U.S. Area served
-          Worldwide Key people Jeff Bezos (Chairman, President & CEO) Werner Vogels (CTO) Products Amazon
-          Appstore Amazon Echo Amazon Kindle Amazon Video Amazon Web Services ComiXology Revenue Increase
-          US$135.98 billion[1] (2016) Operating income Increase US$4.186 billion[1] (2016) Net income
-          Increase US$2.371 billion[1] (2016) Total assets Increase US$83.402 billion[1] (2016) Total
-          equity Increase US$19.285 billion[1] (2016) Number of employees Increase 341,400[2] (2017)
-          Divisions Worldwide Consumer Amazon Web Services (AWS)[3] Subsidiaries A9.com Alexa Internet
-          Amazon Books Amazon Game Studios Amazon Lab126 Amazon Studios Amazon Web Services Audible Inc.
-          Book Depository Digital Photography Review Goodreads Internet Movie Database Junglee.com Souq.com
-          Twitch.tv Whole Foods Market Woot Zappos Website amazon.com
-        </div>
-      </div>
-      <div class="col-md-8">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            Stock Performance
-          </div>
-        </div>
-        <div id="plot"></div>
-      </div>
+    <div style="background-color:rgba(0, 0, 0, 0.03);">
+        <br>
+        <h2>MSE(Mean Squared Error)</h2>
+        <hr>
+        <h3> 1. Definition</h3>
+        <img height="171" width="413" class=" image-border" src="https://www.oreilly.com/library/view/machine-learning-with/9781785889936/assets/image_07_002.jpg">
+        <h3>MSE(Mean Squared Error) Explained!</h3>
+
+
+        <br>
+        <a href="Salesforecast.html"> reference : Davis site</a>
     </div>
 
-    <div class="row">
-      <div class="col-md-12">
-        <table id="summary-table" class="table table-striped table-inverse">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Open</th>
-              <th>High</th>
-              <th>Low</th>
-              <th>Close</th>
-              <th>Volume</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-    </div>
-  </div>
 
 
-
-  
-
-{% endblock %}
-
-{% block scripts %}
-<script src="/static/scripts/plots.js"></script>
-{% endblock %}
+    {% endblock %} {% block scripts %}
+    <script src="/static/scripts/forecastfunctions.js"></script>
+    {% endblock %}
