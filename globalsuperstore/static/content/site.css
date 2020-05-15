@@ -105,7 +105,7 @@ img {
 
 
 .biodata {
-    max-width: 800px;
+    max-width: 600px;
     max-height: 400px;
 }
 #tweepy {
@@ -190,3 +190,23 @@ font-weight: bold;}
     text-align: center;
 
 }
+
+#yearly-bubble-chart {
+    margin-left: 100px;
+}
+
+#quarter-chart {
+    margin-left: 100px;
+}
+
+#monthly-move-chart {
+    margin-left: 100px;
+}
+
+#monthly-volume-chart {
+    margin-left: 100px;
+}
+
+/* #yearly-bubble-chart {
+    margin-left: 60px;
+} */
