@@ -398,7 +398,7 @@ d3.csv('static/data/globalsuperstore.csv').then(data => {
         .x(d3.scaleTime().domain([new Date(2016, 0, 1), new Date(2019, 11, 31)]))
         .round(d3.timeMonth.round)
         .alwaysUseRounding(true)
-        .xAxisLabel('Hover over chart to select time range')
+        // .xAxisLabel('Hover over chart to select time range')
         
         
         // .xUnits(d3.timeMonths);

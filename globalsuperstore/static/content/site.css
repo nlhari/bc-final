@@ -120,7 +120,7 @@ img {
 
 
 .biodata {
-    max-width: 800px;
+    max-width: 600px;
     max-height: 400px;
 }
 >>>>>>> 509d409be652172bcb19de2e9c39154522345be2
@@ -211,5 +211,29 @@ font-weight: bold;}
 
     text-align: center;
 
+<<<<<<< HEAD
 >>>>>>> 509d409be652172bcb19de2e9c39154522345be2
 }
+=======
+}
+
+#yearly-bubble-chart {
+    margin-left: 100px;
+}
+
+#quarter-chart {
+    margin-left: 100px;
+}
+
+#monthly-move-chart {
+    margin-left: 100px;
+}
+
+#monthly-volume-chart {
+    margin-left: 100px;
+}
+
+/* #yearly-bubble-chart {
+    margin-left: 60px;
+} */
+>>>>>>> 28ae92710f68e253563d5f18a32e318ba250fce1
