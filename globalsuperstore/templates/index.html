@@ -7,6 +7,7 @@
 
 {% block content %}
 
+<<<<<<< HEAD
  <div class="jumbotron">
     <h1 class="text1">Data for Decision Making.</h1>
     <p class="lead" id="test" class="text1">Explore our tools for analyzing sales data.</p>
@@ -33,11 +34,123 @@
         <h2 id="test">Analyze Product Sentiment</h2>
         <p id="test1">Search for a product to see its reception on Twitter.</p>
         <!--<p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>-->
+=======
+<div class="jumbotron" id="headertext">
+    <h1>Data for Decision Making.</h1>
+    <p class="lead">Explore our tools for insights into your business data.</p>
+    <p class="lead">At HMI-DaTa Analytics we have a collective experience of 60+ years from a wide range of industry sectors.
+        Our Data Scientists have deep knowledge of Engineering, Manufacturing, Real Estate, Insurance, Consumer Electronics, 
+        Banking and Healthcare industries.
+    </p>
+    <p><a href="/about" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+
+<div class="row" id="tbl">
+    <div class="col-md-4" id="fpcol">
+        <a href="/trends"><img id="fpimage" src="https://i.ya-webdesign.com/images/graph-icon-png-8.png"/>
+        <h2 id="test">Review Trends</h2>
+        <p id="test1">
+            Explore data visualizations showing insights into current market trends.
+        </p></a>
+        <!--<p><a class="btn btn-default" href="http://flask.pocoo.org/docs/">Learn more &raquo;</a></p>-->
+    </div>
+    <div class="col-md-4" id="fpcol1">
+        <img id="fpimage" src="https://cdn0.iconfinder.com/data/icons/data-science-2-3/66/92-512.png"/>
+        <h2 id="test">Explore Machine Learning</h2>
+        <p id="test1">Get cutting-edge information on what drives sales.</p>
+        <!--<p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p>-->
+    </div>
+    <div class="col-md-4" id="fpcol2">
+        <img id="fpimage" src="static/images/output-onlinepngtools.png"/>
+        <h2 id="test">Analyze Product Sentiment</h2>
+        <p id="test1">Search for a product to see its reception on Twitter.</p>
+        <!--<p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>-->
+    </div>
+</div>
+
+<div class="row" id="tweepy">
+    <div class="col-4 col-sm-6 col-md-12">
+        <h2>Review Sentiment Analysis</h2>
+        <form action="/tweepy_search">
+            What term would you like to search for? <input type='text' name='search_term'><br><br>
+        <button type = "submit"><img src="https://img.icons8.com/ios/50/000000/google-web-search.png"/></button><br>
+        <!--<input type='submit' value='Continue'>-->
+    </form>
+    </div>
+</div>
+
+</br>
+<div class="row">
+    <div class="col-4 col-sm-6 col-md-12">
+        <h2>Global Super Store - A Case Study</h2>
+        <p>Our team has been challenged with providing insights into the business of a retail organization.
+            The dataset consists of business transactions over the last four years (2016 - 2019). </p>
+    </div>
+</div>
+
+<img src="../static/images/globalsuperstoredata1.png" id="storedata">
+
+<div class="row">
+    <div class="col-4 col-sm-6 col-md-12">
+        <h3>First Impressions</h3>
+        <p>As true data scientists, we embarked on understanding and analyzing the data with a range of 
+            visualization tools at our disposal.  Rendering their 2019 transaction data over a map we understand
+            the retailer has a global business that seems to be doing well overall but challenged in 
+            certain markets.</p>
+>>>>>>> 509d409be652172bcb19de2e9c39154522345be2
+    </div>
+</div>
+
+
+
+<div class='tableauPlaceholder' id='viz1589375903416' style='position: relative'><noscript><a href='#'><img alt=' '
+    src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;ProfitSalesMap&#47;ProfitSalesMap&#47;1_rss.png'
+    style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+<param name='embed_code_version' value='3' />
+<param name='site_root' value='' />
+<param name='name' value='ProfitSalesMap&#47;ProfitSalesMap' />
+<param name='tabs' value='no' />
+<param name='toolbar' value='yes' />
+<param name='static_image'
+value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;ProfitSalesMap&#47;ProfitSalesMap&#47;1.png' />
+<param name='animate_transition' value='yes' />
+<param name='display_static_image' value='yes' />
+<param name='display_spinner' value='yes' />
+<param name='display_overlay' value='yes' />
+<param name='display_count' value='yes' />
+<param name='filter' value='publish=yes' /></object></div>
+<script
+type='text/javascript'>                    
+var divElement = document.getElementById('viz1589375903416'); 
+var vizElement = divElement.getElementsByTagName('object')[0]; 
+vizElement.style.width = '100%'; 
+vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; 
+scriptElement = document.createElement('script'); 
+scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; 
+vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+</script>
+
+
+<div class="row">
+<<<<<<< HEAD
+    <div class="col-12 col-sm-6 col-md-12">
+=======
+    <div class="col-4 col-sm-6 col-md-12">
+        <h3>Product Portfolio</h3>
+        <p>We took the retail business' latest year financial data to understand their product portfolio, market penetration and sales performance.
+            The sequences sunburst chart below presents our findings that is intuitive to read.</p>
+        <!-- <p><br></p> -->
+        <p>We learn that the business has products ranging from Phones, Copiers, Bookcases to Binders, Paper and Labels.
+            These products are managed through three main categories - Technology, Furniture and Office Supplies.
+            Notice that while the Asia Pacific market (orange segment in third ring) seems to be an important market with most Sales, the Western Europe region
+            (light purple segment in outer ring) has a larger share of sales across all product categories.</p>
     </div>
 </div>
 
 <div class="row">
-    <div class="col-12 col-sm-6 col-md-12">
+    <div class="col-4 col-sm-6 col-md-12 col-xs-12 center">
+>>>>>>> 509d409be652172bcb19de2e9c39154522345be2
         <div id="main">
             <div id="sequence"></div>
             <div id="chart">
@@ -47,17 +160,22 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-4 col-sm-6 col-md-12">
-        <h2>Microsoft Azure</h2>
-        <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application
-            using a free trial today.</p>
-        <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
+        <center><p><em>Hover mouse over different segments of the chart</em></p></center>
     </div>
 </div>
 
+<div class="row">
+    <div class="col-4 col-sm-6 col-md-12">
+        <h3>About the Chart</h3>
+        <p>A <a href="https://www.data-to-viz.com/graph/sunburst.html" target="_blank">sunburst diagram</a> displays a hierarchical structure. The origin of 
+             the organization is represented by the center of the circle, and each level of the organization by an aditional ring. The last level (leaves) 
+             are located at the extreme outer part of the circle.  It is very similar to a <a href="https://www.data-to-viz.com/graph/treemap.html" target="_blank">treemap</a>,
+             except it uses a <code>radial layout</code>.</p>
+        <p>This particular rendering of the sequence sunburst is courtesy <a href="https://bl.ocks.org/kerryrodden/7090426" target="_blank">Kerry Rodden</a>.</p>
+    </div>
+</div>
+
+<<<<<<< HEAD
 <div class="row" id="tweepy">
     <div class="col-4 col-sm-6 col-md-12">
         <h2>Review Sentiment Analysis</h2>
@@ -96,6 +214,8 @@
 
 
 
+=======
+>>>>>>> 509d409be652172bcb19de2e9c39154522345be2
 {% endblock %}
 
 {% block scripts %}

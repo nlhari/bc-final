@@ -16,13 +16,32 @@
       </h2>
       <p></p>
     </div>
+
     <div class="row">
       <div class="col-4 col-sm-6 col-md-12">
-          <h2>Microsoft Azure</h2>
-          <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
-          <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
+          <h3>First Impressions</h3>
+          <p>As true data scientists, we embarked on understanding and analyzing the data with a range of 
+              visualization tools at our disposal.  Rendering their 2019 transaction data over a map we understand
+              the retailer has a global business that seems to be doing well overall but challenged in 
+              certain markets.</p>
       </div>
     </div>
+  
+  <img src="../static/images/gss_performance.png" class="center" id="gss_performance">
+  
+  <div class="row">
+    <div class="col-4 col-sm-6 col-md-12">
+        <h3>Product Portfolio</h3>
+        <p>We took the retail business' latest year financial data to understand their product portfolio, market penetration and sales performance.
+            The sequences sunburst chart below presents our findings that is intuitive to read.</p>
+
+        <p>We learn that the business has products ranging from Phones, Copiers, Bookcases to Binders, Paper and Labels.
+            These products are managed through three main categories - Technology, Furniture and Office Supplies.
+            Notice that while the Asia Pacific market (orange segment in third ring) seems to be an important market with most Sales, the Western Europe region
+            (light purple segment in outer ring) has a larger share of sales across all product categories.</p>
+    </div>
+  </div>
+
     <div class="row">
         <div id="yearly-bubble-chart" class="dc-chart">
           <strong id="text1">Time Range Performance</strong> (radius: Sales ('000), color: profit/loss)
@@ -47,6 +66,7 @@
       
           <div class="clearfix"></div>
         </div>
+<<<<<<< HEAD
       
         <div id="fluctuation-chart">
           <strong id="text1">Profit Fluctuation(%)</strong>
@@ -66,29 +86,59 @@
       
           <div class="clearfix"></div>
         </div>
+=======
+    
+      <div id="fluctuation-chart">
+        <center><strong id="text1">Profit Fluctuation(%)</strong></center>
+        <span class="reset" style="display: none;">range: <span class="filter"></span></span>
+        <a class="reset" href="javascript:fluctuationChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+    
+        <div class="clearfix"></div>
       </div>
-      
-      <div class="row">
-        <div id="monthly-volume-chart">
+    </div>
+    
+    <div class="row">
+      <div id="monthly-move-chart">
+        <strong id="text1">Monthly Sales</strong>
+        <span class="reset" style="display: none;">range: <span class="filter"></span></span>
+        <a class="reset" href="javascript:moveChart.filterAll();volumeChart.filterAll();dc.redrawAll();"
+          style="display: none;">reset</a>
+    
+        <div class="clearfix"></div>
+>>>>>>> 509d409be652172bcb19de2e9c39154522345be2
+      </div>
+    </div>
+    
+    <div class="row">
+      <div id="monthly-volume-chart">
+      </div>
+      <!-- <p class="muted pull-right" style="margin-right: 15px;">select a time range to zoom in</p> -->
+    </div>
+    
+    <div class="row">
+      <div>
+        <div class="dc-data-count">
+          <span class="filter-count"></span> selected out of <span class="total-count"></span> records | <a
+            href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
         </div>
-        <!-- <p class="muted pull-right" style="margin-right: 15px;">select a time range to zoom in</p> -->
       </div>
+      <table class="table table-hover dc-data-table">
+      </table>
+    </div>
+    
+    <div class="clearfix"></div>
       
-      <div class="row">
-        <div>
-          <div class="dc-data-count">
-            <span class="filter-count"></span> selected out of <span class="total-count"></span> records | <a
-              href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
-          </div>
-        </div>
-        <table class="table table-hover dc-data-table">
-        </table>
+    <div class="row">
+      <div class="col-4 col-sm-6 col-md-12">
+          <h3>About the Chart</h3>
+          <p>A <a href="https://www.data-to-viz.com/graph/sunburst.html" target="_blank">sunburst diagram</a> displays a hierarchical structure. The origin of 
+               the organization is represented by the center of the circle, and each level of the organization by an aditional ring. The last level (leaves) 
+               are located at the extreme outer part of the circle.  It is very similar to a <a href="https://www.data-to-viz.com/graph/treemap.html" target="_blank">treemap</a>,
+               except it uses a <code>radial layout</code>.</p>
+          <p>This particular rendering of the sequence sunburst is courtesy <a href="https://bl.ocks.org/kerryrodden/7090426" target="_blank">Kerry Rodden</a>.</p>
       </div>
-      
-      <div class="clearfix"></div>
-      
-      
-      
+    </div>      
+
 </div>
 
 {% endblock %}

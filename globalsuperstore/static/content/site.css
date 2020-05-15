@@ -1,14 +1,14 @@
 body {
     padding-top: 50px;
     padding-bottom: 20px;
-    /* background-image: url("static/images/data-analytics.png"); */
+    /* background-image: url("../images/background4.jpg"); */
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
-    /* background-color: rgb(194, 199, 199); */
+    /* background-color: rgb(236, 240, 240); */
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -47,10 +47,15 @@ img {
 
     position: relative;
     width: 100%;
+<<<<<<< HEAD
     height: 300px;
+=======
+    /*height: 300px;*/
+>>>>>>> 509d409be652172bcb19de2e9c39154522345be2
     background-image: url("static/content/data/spreadsheet.jpg");
     background-size: cover;
-
+    /* max-width: 100%;
+    max-height: 100%; */
 
 }
 
@@ -60,6 +65,15 @@ img {
 
 }
 
+<<<<<<< HEAD
+.text1 {
+
+    text-align: center;
+
+}
+
+=======
+>>>>>>> 509d409be652172bcb19de2e9c39154522345be2
 #text1 {margin-left: auto !important; margin-right: auto !important;}
 
 .caption1 {
@@ -85,6 +99,31 @@ img {
 
 }
 
+<<<<<<< HEAD
+=======
+.center {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+#gss_performance {
+    margin: 0 auto;
+    width: auto;
+}
+
+#storedata {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+.biodata {
+    max-width: 800px;
+    max-height: 400px;
+}
+>>>>>>> 509d409be652172bcb19de2e9c39154522345be2
 #tweepy {
 
     background-color: whitesmoke;
@@ -117,7 +156,11 @@ img {
     flex-wrap: wrap;
 padding-top: 15px;}
 
+<<<<<<< HEAD
 a:link {color:black;}
+=======
+#fpcol > a:link {color:black;}
+>>>>>>> 509d409be652172bcb19de2e9c39154522345be2
 
 #fpcol {
 
@@ -160,4 +203,13 @@ font-weight: bold;}
 #footer > p {
     text-align: center;
     color: lightgray;
+<<<<<<< HEAD
+=======
+}
+
+#headertext {
+
+    text-align: center;
+
+>>>>>>> 509d409be652172bcb19de2e9c39154522345be2
 }
