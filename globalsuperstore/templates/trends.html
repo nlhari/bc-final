@@ -25,7 +25,7 @@
     </div>
     <div class="row">
         <div id="yearly-bubble-chart" class="dc-chart">
-          <strong>Time Range Performance</strong> (radius: Sales ('000), color: profit/loss)
+          <strong id="text1">Time Range Performance</strong> (radius: Sales ('000), color: profit/loss)
           <a class="reset" href="javascript:yearlyBubbleChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
       
           <div class="clearfix"></div>
@@ -35,21 +35,21 @@
       <div class="row">
       
         <div id="quarter-chart">
-          <strong>Quarters</strong>
+          <strong id="text1">Quarters</strong>
           <a class="reset" href="javascript:quarterChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
       
           <div class="clearfix"></div>
         </div>
       
         <div id="day-of-week-chart">
-          <strong>Daily Transaction Volume</strong>
+          <strong id="text1">Daily Transaction Volume</strong>
           <a class="reset" href="javascript:dayOfWeekChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
       
           <div class="clearfix"></div>
         </div>
       
         <div id="fluctuation-chart">
-          <strong>Profit Fluctuation(%)</strong>
+          <strong id="text1">Profit Fluctuation(%)</strong>
           <span class="reset" style="display: none;">range: <span class="filter"></span></span>
           <a class="reset" href="javascript:fluctuationChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
       
@@ -59,7 +59,7 @@
       
       <div class="row">
         <div id="monthly-move-chart">
-          <strong>Monthly Sales</strong>
+          <strong id="text1">Monthly Sales</strong>
           <span class="reset" style="display: none;">range: <span class="filter"></span></span>
           <a class="reset" href="javascript:moveChart.filterAll();volumeChart.filterAll();dc.redrawAll();"
             style="display: none;">reset</a>
