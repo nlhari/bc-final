@@ -1,0 +1,21 @@
+    /* ----DEFAULT ELEMENT STYLING START---- */
+    
+    html {
+        /* Positioning */
+        position: relative;
+        /* Box-model */
+        min-height: 100%;
+    }
+    
+    body {
+        /* Positioning */
+        margin-bottom: 150px;
+        /* Typography */
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        /* Visual */
+        background-color: #ededed;
+    }
+    
+    .whiterow {
+        background-color: lightblue;
+    }
