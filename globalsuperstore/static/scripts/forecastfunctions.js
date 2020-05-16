@@ -2,18 +2,28 @@
 var datapath = "static/data/fcstresults3.csv";
 var trans_time = 1500;
 
-var margin_l = { top: 50, right: 30, bottom: 30, left: 50 },
-    width_l = 666 - margin_l.left - margin_l.right,
+var margin_l = { top: 100, right: 30, bottom: 30, left: 50 },
+    width_l = 600 - margin_l.left - margin_l.right,
     height_l = 600 - margin_l.top - margin_l.bottom;
 
 // append the svg object to the body of the page
-var svg_l = d3.select("#chart")
+var svg_l = d3.select("#forecastchart")
     .append("svg")
     .attr("width", width_l + margin_l.left + margin_l.right)
     .attr("height", height_l + margin_l.top + margin_l.bottom)
     .append("g")
     .attr("transform",
         "translate(" + margin_l.left + "," + margin_l.top + ")");
+
+
+
+svg_l.append("text")
+    .attr("x", (width_l / 2))
+    .attr("y", 0 - (margin_l.top / 2))
+    .attr("text-anchor", "middle")
+    .style("font-size", "32px")
+    .text("Monthly Sales and Forecast");
+
 
 // Initialise a X axis:
 var x_l = d3.scaleTime().range([0, width_l]);
@@ -31,12 +41,6 @@ var yAxis_l = d3.axisLeft().scale(y_l);
 svg_l.append("g")
     .attr("class", "myYaxis")
 
-svg_l.append("text")
-    .attr("x", (width_l / 2))
-    .attr("y", 0 - (margin_l.top / 2))
-    .attr("text-anchor", "middle")
-    .style("font-size", "32px")
-    .text("Monthly Sales and Forecast");
 
 svg_l.append("circle").attr("cx", (width_l - 80)).attr("cy", (height_l - 40)).attr("r", 6).style("fill", "steelblue")
 svg_l.append("circle").attr("cx", (width_l - 80)).attr("cy", (height_l - 60)).attr("r", 6).style("fill", "orangered")
@@ -56,6 +60,7 @@ function getDateArray(start, end) {
     }
     return arr;
 }
+
 
 var
     startDate = new Date("2016-01-02"),
@@ -102,7 +107,7 @@ function updateall(datapath, cat = "Total Sales", subcat = "Total Sales") {
 
         console.log(filteredData[0]["MSE"])
 
-        var data = { "d": graph_value, "metric_mse": MSE_val, "metric_mape": MAPE_val };
+        var data = { "layer1": cat, "layer2": subcat, "d": graph_value, "metric_mse": MSE_val, "metric_mape": MAPE_val };
 
         updategraph(data)
 
@@ -110,14 +115,27 @@ function updateall(datapath, cat = "Total Sales", subcat = "Total Sales") {
 }
 
 
-
-
-
 function updategraph(d) {
 
     data = d.d;
     MSE_val = d.metric_mse;
     MAPE_val = d.metric_mape;
+
+    var u_title = svg_l.selectAll(".selectedf").data([d.layer1]);
+
+    u_title
+        .enter()
+        .append("text")
+        .attr("class", "selectedf")
+        .merge(u_title)
+        .transition()
+        .duration(trans_time)
+        .attr("x", (width_l / 2))
+        .attr("y", 0 - (margin_l.top / 2) + 30)
+        .attr("text-anchor", "middle")
+        .style("font-size", "20px")
+        .style("font-weight", 650)
+        .text(`Level 1 : ${d.layer1} || Level 2 : ${d.layer2}`);
 
 
     var u_m = svg_l.selectAll(".MSEvalue").data([MSE_val]);
@@ -129,9 +147,9 @@ function updategraph(d) {
         .merge(u_m)
         .transition()
         .duration(trans_time)
-        .attr("x", (width_l / 2))
-        .attr("y", 0 - (margin_l.top / 2) + 30)
-        .attr("text-anchor", "middle")
+        .attr("x", 20)
+        .attr("y", 0 - (margin_l.top / 2) + 60)
+        .attr("text-anchor", "left")
         .style("font-size", "16px")
         .text(`Loss Metric from Keras(Mean Squared Value) : ${MSE_val}`);
 
@@ -144,9 +162,9 @@ function updategraph(d) {
         .merge(u_m2)
         .transition()
         .duration(trans_time)
-        .attr("x", (width_l / 2))
-        .attr("y", 0 - (margin_l.top / 2) + 50)
-        .attr("text-anchor", "middle")
+        .attr("x", 20)
+        .attr("y", 0 - (margin_l.top / 2) + 80)
+        .attr("text-anchor", "left")
         .style("font-size", "16px")
         .text(`Forecast Accuracy (Mean Absolute Percentage Error, MAPE) : ${MAPE_val}%`);
 
@@ -220,93 +238,6 @@ function updategraph(d) {
 }
 
 
-
-
-//Execution
-
-
-// var treeData = {
-//     "name": "Total Sales",
-//     "children": [{
-//             "name": "Furniture",
-//             "children": [{
-//                     "name": "Bookcases",
-//                     "children": [{ "name": "Africa" }, { "name": "Asia Pacific" }, { "name": "Europe" }, { "name": "LATAM" }, { "name": "USCA" }]
-//                 },
-//                 {
-//                     "name": "Furnishings",
-//                     "children": [{ "name": "Africa" }, { "name": "Asia Pacific" }, { "name": "Europe" }, { "name": "LATAM" }, { "name": "USCA" }]
-//                 },
-//                 {
-//                     "name": "Tables",
-//                     "children": [{ "name": "Africa" }, { "name": "Asia Pacific" }, { "name": "Europe" }, { "name": "LATAM" }, { "name": "USCA" }]
-//                 },
-//                 {
-//                     "name": "Chairs",
-//                     "children": [{ "name": "Africa" }, { "name": "Asia Pacific" }, { "name": "Europe" }, { "name": "LATAM" }, { "name": "USCA" }]
-//                 }
-//             ]
-//         },
-//         {
-//             "name": "Office Supplies",
-//             "children": [{
-//                     "name": "Appliances",
-//                     "children": [{ "name": "Africa" }, { "name": "Asia Pacific" }, { "name": "Europe" }, { "name": "LATAM" }, { "name": "USCA" }]
-//                 },
-//                 {
-//                     "name": "Binders",
-//                     "children": [{ "name": "Africa" }, { "name": "Asia Pacific" }, { "name": "Europe" }, { "name": "LATAM" }, { "name": "USCA" }]
-//                 },
-//                 {
-//                     "name": "Fasteners",
-//                     "children": [{ "name": "Africa" }, { "name": "Asia Pacific" }, { "name": "Europe" }, { "name": "LATAM" }, { "name": "USCA" }]
-//                 },
-//                 {
-//                     "name": "Labels",
-//                     "children": [{ "name": "Africa" }, { "name": "Asia Pacific" }, { "name": "Europe" }, { "name": "LATAM" }, { "name": "USCA" }]
-//                 },
-//                 {
-//                     "name": "Paper",
-//                     "children": [{ "name": "Africa" }, { "name": "Asia Pacific" }, { "name": "Europe" }, { "name": "LATAM" }, { "name": "USCA" }]
-//                 },
-//                 {
-//                     "name": "Storage",
-//                     "children": [{ "name": "Africa" }, { "name": "Asia Pacific" }, { "name": "Europe" }, { "name": "LATAM" }, { "name": "USCA" }]
-//                 },
-//                 {
-//                     "name": "Supplies",
-//                     "children": [{ "name": "Africa" }, { "name": "Asia Pacific" }, { "name": "Europe" }, { "name": "LATAM" }, { "name": "USCA" }]
-//                 },
-//                 {
-//                     "name": "Art",
-//                     "children": [{ "name": "Africa" }, { "name": "Asia Pacific" }, { "name": "Europe" }, { "name": "LATAM" }, { "name": "USCA" }]
-//                 }
-//             ]
-//         },
-//         {
-//             "name": "Technology",
-//             "children": [{
-//                     "name": "Accessories",
-//                     "children": [{ "name": "Africa" }, { "name": "Asia Pacific" }, { "name": "Europe" }, { "name": "LATAM" }, { "name": "USCA" }]
-//                 },
-//                 {
-//                     "name": "Machines",
-//                     "children": [{ "name": "Africa" }, { "name": "Asia Pacific" }, { "name": "Europe" }, { "name": "LATAM" }, { "name": "USCA" }]
-//                 },
-//                 {
-//                     "name": "Phones",
-//                     "children": [{ "name": "Africa" }, { "name": "Asia Pacific" }, { "name": "Europe" }, { "name": "LATAM" }, { "name": "USCA" }]
-//                 },
-//                 {
-//                     "name": "Copiers",
-//                     "children": [{ "name": "Africa" }, { "name": "Asia Pacific" }, { "name": "Europe" }, { "name": "LATAM" }, { "name": "USCA" }]
-//                 }
-//             ]
-//         }
-//     ]
-// }
-
-
 var treeData = {
     "name": "Total Sales",
     "children": [{
@@ -378,7 +309,7 @@ var treeData = {
 
 
 // Set the dimensions and margins of the diagram
-var margin = { top: 50, right: 90, bottom: 40, left: 90 },
+var margin = { top: 100, right: 90, bottom: 40, left: 90 },
     width = 550 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
@@ -393,11 +324,12 @@ var svg = d3.select("#y_filters").append("svg")
         margin.left + "," + margin.top + ")");
 
 svg.append("text")
-    .attr("x", (width_l / 2))
-    .attr("y", 0 - (margin_l.top / 2))
+    .attr("x", (width / 2))
+    .attr("y", 0 - (margin.top / 2))
     .attr("text-anchor", "middle")
     .style("font-size", "32px")
-    .text("Select Product Category");
+    .text("Select Product Category")
+    .attr("font-family", 'Gill Sans MT');
 
 
 var i = 0,

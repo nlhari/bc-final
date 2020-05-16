@@ -6,14 +6,8 @@
 <h2>{{ title }}.</h2>
 <h3>{{ message }}</h3>
 <style>
-    body {
-        font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
-    }
-    
-    div {
-        width: 100%;
-        margin-top: 20px;
-        margin-bottom: 20px;
+    .davis_text {
+        font-family: 'Gill Sans MT';
     }
     
     .node circle {
@@ -44,32 +38,59 @@
 
 </head>
 
-<body>
 
-    <div class="whiterow">
 
-        <h2>Monthly Sales Forecast Using Machine Learning</h5>
-            <hr>
-            <div id="y_filters" class="col-md-4"></div>
-            <div id="chart" class="col-md-8"></div>
-            <br>
-            <p>References :</p>
-            <a href="https://www.d3-graph-gallery.com/graph/line_change_data.html"> D3 Line Graph : d3-gallary.com</a><br>
-            <a href="https://bl.ocks.org/d3noob/1a96af738c89b88723eb63456beb6510"> D3 Tree Diagram : bl.ocks.org/d3noob/</a>
+<div style="width: 100%; overflow: hidden;" class="davis_text">
+    <h2>Monthly Sales Forecast Using Machine Learning</h2>
+    <hr>
+    <div id="y_filters" style="width: 570px; float: left;"> </div>
+    <div id="forecastchart" style="margin-left: 100px;"> </div>
+    <a href="https://www.d3-graph-gallery.com/graph/line_change_data.html"> Reference for D3 Line Graph : d3-gallary.com</a><br>
+    <a href="https://bl.ocks.org/d3noob/1a96af738c89b88723eb63456beb6510"> Reference for D3 Tree Diagram : bl.ocks.org/d3noob/</a>
+</div>
+​
+<div style="width: 100%; overflow: hidden; background-color	:rgb(0, 0, 0, 0.04);" class="davis_text">
+    <h2> Used Metric : MAPE (Mean Absolute Percentage Error)</h2>
+    <hr>
+    <div style="width: 320px; float: right;">
+        <img width="300px" src="https://www.statisticshowto.com/wp-content/uploads/2017/09/mape.jpeg">
     </div>
-
-    <div style="background-color:rgba(0, 0, 0, 0.03);">
-        <br>
-        <h2>MSE(Mean Squared Error)</h2>
-        <hr>
-        <h3> 1. Definition</h3>
-        <img height="171" width="413" class=" image-border" src="https://www.oreilly.com/library/view/machine-learning-with/9781785889936/assets/image_07_002.jpg">
-        <h3>MSE(Mean Squared Error) Explained!</h3>
-
-
-        <br>
-        <a href="Salesforecast.html"> reference : Davis site</a>
+    <div>
+        <h3>Definition</h3>
+        <p>The mean absolute percentage error (MAPE) is a statistical measure of how accurate a forecast system is. It measures this accuracy as a percentage, and can be calculated as the average absolute percent error for each time period minus actual
+            values divided by actual values. The mean absolute percentage error (MAPE) is the most common measure used to forecast error, and works best if there are no extremes to the data (and no zeros).
+        </p>
+        <a href="https://www.statisticshowto.com/mean-absolute-percentage-error-mape/"> Reference : statisticshowto.com</a><br>
     </div>
+    <div style="width: 100%; overflow: hidden;" class="davis_text">
+        <h3>So How Low Should MAPE be for Valid Sales Forecast?</h3>
+        <p> It is easy to determine the lower limit of how accurate a forecast should be: at least as accurate as a naive model. Determining the upper limit of forecast accuracy is much more diffi cult. Theoretically, forecast accuracy is limited only
+            by the amount of randomness in the behavior you are forecasting. If you can fi gure out the “ rule ”governing the behavior, if that rule doesn ’ t change over time, and if there is no randomness in the behavior, then you should be able
+            to achieve 100% accuracy. Unfortunately, in real life, we are never sure we have captured the “ rule ”in our forecast model, we have no guarantee that the rule won ’ t change over time, and we have to deal with some level of randomness.
+            The coin - tossing forecasting contest in Chapter 1illustrated this point. Randomness determined the limit of forecast accuracy for each process — there was nothing we could do to make the forecast any better.
+        </p>
+        <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119199885.app1"> Reference : onlinelibrary.wiley.com</a><br>
+    </div>
+</div>
+​
+<div style="width: 100%; overflow: hidden;);" class="davis_text">
+    <h2> Used Model : LSTM(Long short-term memory) Model</h2>
+    <hr>
+    <div style="width: 500px; float: right;">
+        <img width="500px" src="https://colah.github.io/posts/2015-08-Understanding-LSTMs/img/LSTM3-chain.png">
+    </div>
+    <div>
+        <h3>Definition</h3>
+        <p>Long short-term memory (LSTM) is an artificial recurrent neural network (RNN) architecture[1] used in the field of deep learning. Unlike standard feedforward neural networks, LSTM has feedback connections. It can not only process single data
+            points (such as images), but also entire sequences of data (such as speech or video). For example, LSTM is applicable to tasks such as unsegmented, connected handwriting recognition,[2] speech recognition[3][4] and anomaly detection in
+            network traffic or IDS's (intrusion detection systems). A common LSTM unit is composed of a cell, an input gate, an output gate and a forget gate. The cell remembers values over arbitrary time intervals and the three gates regulate the
+            flow of information into and out of the cell. LSTM networks are well-suited to classifying, processing and making predictions based on time series data, since there can be lags of unknown duration between important events in a time series.
+            LSTMs were developed to deal with the vanishing gradient problem that can be encountered when training traditional RNNs. Relative insensitivity to gap length is an advantage of LSTM over RNNs, hidden Markov models and other sequence learning
+            methods in numerous applications.
+        </p>
+        <a href="https://en.wikipedia.org/wiki/Long_short-term_memory"> Reference : wikipedia.org/wiki/Long_short-term_memory</a><br>
+    </div>
+</div>
 
 
 
