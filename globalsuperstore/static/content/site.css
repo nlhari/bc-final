@@ -1,6 +1,7 @@
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+
     /* background-image: url("../images/background4.jpg"); */
 }
 
@@ -8,6 +9,7 @@ body {
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    max-width: 1700px;
     /* background-color: rgb(236, 240, 240); */
 }
 
