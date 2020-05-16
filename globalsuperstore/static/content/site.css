@@ -47,11 +47,7 @@ img {
 
     position: relative;
     width: 100%;
-<<<<<<< HEAD
-    height: 300px;
-=======
     /*height: 300px;*/
->>>>>>> 509d409be652172bcb19de2e9c39154522345be2
     background-image: url("static/content/data/spreadsheet.jpg");
     background-size: cover;
     /* max-width: 100%;
@@ -65,15 +61,6 @@ img {
 
 }
 
-<<<<<<< HEAD
-.text1 {
-
-    text-align: center;
-
-}
-
-=======
->>>>>>> 509d409be652172bcb19de2e9c39154522345be2
 #text1 {margin-left: auto !important; margin-right: auto !important;}
 
 .caption1 {
@@ -99,8 +86,6 @@ img {
 
 }
 
-<<<<<<< HEAD
-=======
 .center {
     display: block;
     margin: 0 auto;
@@ -123,7 +108,6 @@ img {
     max-width: 600px;
     max-height: 400px;
 }
->>>>>>> 509d409be652172bcb19de2e9c39154522345be2
 #tweepy {
 
     background-color: whitesmoke;
@@ -156,11 +140,7 @@ img {
     flex-wrap: wrap;
 padding-top: 15px;}
 
-<<<<<<< HEAD
-a:link {color:black;}
-=======
 #fpcol > a:link {color:black;}
->>>>>>> 509d409be652172bcb19de2e9c39154522345be2
 
 #fpcol {
 
@@ -203,18 +183,12 @@ font-weight: bold;}
 #footer > p {
     text-align: center;
     color: lightgray;
-<<<<<<< HEAD
-=======
 }
 
 #headertext {
 
     text-align: center;
 
-<<<<<<< HEAD
->>>>>>> 509d409be652172bcb19de2e9c39154522345be2
-}
-=======
 }
 
 #yearly-bubble-chart {
@@ -236,4 +210,3 @@ font-weight: bold;}
 /* #yearly-bubble-chart {
     margin-left: 60px;
 } */
->>>>>>> 28ae92710f68e253563d5f18a32e318ba250fce1
