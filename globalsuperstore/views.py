@@ -84,7 +84,7 @@ def tweepy_search():
     scrape_tweet(search_term)
     return render_template(
         'tweepy_search.html',
-        term=search_term,
+        term='Tweepy Results for ' + search_term,
         tables = [df.to_html(classes='data', header="true", index=False)]
     )
    
