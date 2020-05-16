@@ -32,24 +32,24 @@ def trends():
     )
 
 
-@app.route('/contact')
-def contact():
+@app.route('/sentiment')
+def sentiment():
     """Renders the contact page."""
     return render_template(
-        'contact.html',
-        title='Contact',
-        year=datetime.now().year,
-        message='Your contact page.'
+        'sentiment.html',
+        title='Sentiment Analysis',
+        year=datetime.now().year
+        # message='Your contact page.'
     )
 
-@app.route('/plot')
-def plot():
+@app.route('/forecast')
+def forecast():
     """Renders the contact page."""
     return render_template(
-        'plot.html',
-        title='Financial Report',
-        year=datetime.now().year,
-        message='Your Financial report page.'
+        'forecast.html',
+        title='Machine Learning Forecasting',
+        year=datetime.now().year
+        # message='Your Financial report page.'
     )
 
 @app.route('/about')
